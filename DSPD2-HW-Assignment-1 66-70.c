@@ -145,31 +145,7 @@ void printNode(struct Song* node) {
 void sort_play(struct Song **head){
     struct Song *current;
     song* index;
-//    struct Song *temp = NULL;
-//    while (current != NULL) {
-//        temp = current->next;
-//        while (temp != NULL) {
-//            if (strcmp(current->song_name, temp->song_name) > 0) {
-//                struct Song *prev = current->prev;
-//                struct Song *next = temp->next;
-//                if (prev != NULL) {
-//                    prev->next = temp;
-//                } else {
-//                    *head = temp;
-//                }
-//                if (next != NULL) {
-//                    next->prev = current;
-//                }
-//                current->next = next;
-//                current->prev = temp;
-//                temp->next = current;
-//                temp->prev = prev;
-//                current = temp;
-//            }
-//            temp = temp->next;
-//        }
-//        current = current->next;
-//    }
+
     
     for(current = *head; current->next != NULL; current = current->next) {  
         //Index will point to node next to current  
@@ -455,31 +431,7 @@ void createPlaylist(struct Song *head){
 
 }
 void removeDuplicates(song** myplay){
-    // song* current=*myplay;
-    // while (current != NULL) {
-    //     temp = current->next;
-    //     while (temp != NULL) {
-    //         if (strcmp(current->song_name, temp->song_name) > 0) {
-    //             struct Song *prev = current->prev;
-    //             struct Song *next = temp->next;
-    //             if (prev != NULL) {
-    //                 prev->next = temp;
-    //             } else {
-    //                 **myplay = temp;
-    //             }
-    //             if (next != NULL) {
-    //                 next->prev = current;
-    //             }
-    //             current->next = next;
-    //             current->prev = temp;
-    //             temp->next = current;
-    //             temp->prev = prev;
-    //             current = temp;
-    //         }
-    //         temp = temp->next;
-    //     }
-    //     current = current->next;
-    // }
+    
     sort_play(myplay);
 	song* curr=*myplay;
 	if(curr!=NULL){
@@ -495,23 +447,6 @@ void removeDuplicates(song** myplay){
 		}
 	}
 	
-//    struct Node* current = *head_ref;
-//    struct Node* next;
-// 
-//    /* traverse the list till the last node */
-//    while (current->next != NULL) {
-// 
-//        /* Compare current node with next node */
-//        if (current->data == current->next->data)
-// 
-//            /* delete the node pointed to by
-//              'current->next' */
-//            deleteNode(head_ref, current->next);
-// 
-//        /* else simply move to the next node */
-//        else
-//            current = current->next;
-
 }
 void playInLoop(song* head) {
     int k, i;

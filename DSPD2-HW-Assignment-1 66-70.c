@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <time.h>   
+#include <string.h> 
 typedef struct Song {
 	char song_name[100];
     char singer[100];
